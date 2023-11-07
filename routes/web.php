@@ -55,3 +55,8 @@ Route::group(['middleware'=>'auth'],function(){
     Route::put('/edit_form/{id}',[StudentController::class,'update'])->name('update');
     Route::get('/destroy/{id}',[StudentController::class,'destroy'])->name('destroy');
 });
+
+//for laravel mix
+Route::get('/laravel_mix',function(){
+    return view('laravel_mix');
+});
